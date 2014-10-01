@@ -19,6 +19,32 @@ if ((isset($_POST['price'])) && (strlen(trim($_POST['price'])) > 0)) {
 } else {
     $price = 'Price not selected';
 }
+if ((isset($_POST['org'])) && (strlen(trim($_POST['org'])) > 0)) {
+	$org = stripslashes(strip_tags($_POST['org']));
+} else {
+	$org = 'Organization not selected';
+}
+if ((isset($_POST['tshirt'])) && (strlen(trim($_POST['tshirt'])) > 0)) {
+	$tshirt = stripslashes(strip_tags($_POST['tshirt']));
+} else {
+	$tshirt = 'T Shirt not selected';
+}
+if ((isset($_POST['arrival'])) && (strlen(trim($_POST['arrival'])) > 0)) {
+	$arrival = stripslashes(strip_tags($_POST['arrival']));
+} else {
+	$arrival = 'Arrival not selected';
+}
+if ((isset($_POST['depart'])) && (strlen(trim($_POST['depart'])) > 0)) {
+	$depart = stripslashes(strip_tags($_POST['depart']));
+} else {
+	$depart = 'Departure not selected';
+}
+if ((isset($_POST['accommodation'])) && (strlen(trim($_POST['accommodation'])) > 0)) {
+	$accommodation = stripslashes(strip_tags($_POST['accommodation']));
+} else {
+	$accommodation = 'Departure not selected';
+}
+
 ob_start();
 ?>
 <html>
@@ -41,17 +67,33 @@ ob_start();
         <td><?php echo $phone; ?></td>
     </tr>
     <tr bgcolor="#eeeeff">
-        <td>Price</td>
-        <td><?php echo $price; ?></td>
+        <td>Organization</td>
+        <td><?php echo $org; ?></td>
     </tr>
+	<tr bgcolor="#eeeeff">
+		<td>T Shirt</td>
+		<td><?php echo $tshirt; ?></td>
+	</tr>
+	<tr bgcolor="#eeeeff">
+		<td>Arrival Date</td>
+		<td><?php echo $arrival; ?></td>
+	</tr>
+	<tr bgcolor="#eeeeff">
+		<td>Departure Date</td>
+		<td><?php echo $depart; ?></td>
+	</tr>
+	<tr bgcolor="#eeeeff">
+		<td>Accommodation Required?</td>
+		<td><?php echo $accommodation; ?></td>
+	</tr>
 </table>
 </body>
 </html>
 <?php
 $body = ob_get_contents();
 
-$to = 'you@domain.com';
-$toname = 'Your Name';
+$to = 'fossatamrita@gmail.com';
+$toname = 'FOSSAtamrita';
 //$anotheraddress = 'email@example.com';
 //$anothername = 'Another Name';
 
