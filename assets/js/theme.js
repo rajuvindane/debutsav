@@ -289,7 +289,7 @@ var theme = function () {
                 var mapOptions = {
                     scrollwheel: false,
                     zoom: 12,
-                    center: new google.maps.LatLng(40.9807648, 28.9866516)
+                    center: new google.maps.LatLng(9.093692, 76.491590)
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
