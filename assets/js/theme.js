@@ -189,27 +189,27 @@ var theme = function () {
         },
         // Main Slider
         initMainSlider: function () {
-            $('#main-slider').owlCarousel({
-                //items: 1,
-                autoplay: false,
-                autoplayHoverPause: true,
-                loop: false,
-                margin: 0,
-                dots: false,
-                nav: false,
-                navText: [
-                    "<i class='fa fa-angle-left'></i>",
-                    "<i class='fa fa-angle-right'></i>"
-                ],
-                responsiveRefreshRate: 100,
-                responsive: {
-                    0:    {items: 1},
-                    479:  {items: 1},
-                    768:  {items: 1},
-                    991:  {items: 1},
-                    1024: {items: 1}
-                }
-            });
+            // $('#main-slider').owlCarousel({
+            //     //items: 1,
+            //     autoplay: false,
+            //     autoplayHoverPause: true,
+            //     loop: false,
+            //     margin: 0,
+            //     dots: false,
+            //     nav: false,
+            //     navText: [
+            //         "<i class='fa fa-angle-left'></i>",
+            //         "<i class='fa fa-angle-right'></i>"
+            //     ],
+            //     responsiveRefreshRate: 100,
+            //     responsive: {
+            //         0:    {items: 1},
+            //         479:  {items: 1},
+            //         768:  {items: 1},
+            //         991:  {items: 1},
+            //         1024: {items: 1}
+            //     }
+            // });
 
         },
         // CountDown

@@ -1,0 +1,5 @@
+#main-slider .item.page {
+	background: url(../../images/sethu.jpg) no-repeat center center;
+	background-attachment: scroll;
+	background-size: cover;
+}
