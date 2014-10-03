@@ -99,14 +99,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		$ret = $db->exec($sql);
 		if($ret)
 		{
-			echo "good";
 			$db->close();
+			echo "written";
 			header('location:return.html');
 		} else {
 			echo "writing failed";
 		}
 	} else {
 		echo "wrong data entered";
+		header('location:../../index.html');
 	}
 }
 ?>

@@ -87,7 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if($ret)
 		{
 			$db->close();
-			?><?php
 			header('location:return.html');
 		} else {
 			echo "fail";
