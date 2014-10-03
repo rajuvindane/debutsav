@@ -100,13 +100,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		if($ret)
 		{
 			$db->close();
-			echo "written";
 			header('location:return.html');
 		} else {
 			echo "writing failed";
 		}
 	} else {
-		echo "wrong data entered";
 		header('location:../../index.html');
 	}
 }

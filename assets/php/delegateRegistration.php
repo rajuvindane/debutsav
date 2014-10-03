@@ -92,7 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			echo "fail";
 		}
 	} else {
-		echo "wrong input";
 		header('location:../../index.html');
 	}
 }
