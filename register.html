@@ -2,7 +2,8 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" xmlns="http://www.w3.org/1999/html"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
@@ -102,7 +103,7 @@
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
                             <input
-                                    type="text" name="name" id="name" placeholder="Type Your Name..." value="" size="30"
+                                    type="text" name="sp-name" id="sp-name" placeholder="Type Your Name..." value="" size="30"
                                     data-toggle="tooltip" title="Name is required"
                                     class="form-control placeholder"/>
                         </div>
@@ -111,7 +112,7 @@
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
                             <input
-                                    type="text" name="email" id="email" placeholder="Type Your Email..." value="" size="30"
+                                    type="text" name="sp-email" id="sp-email" placeholder="Type Your Email..." value="" size="30"
                                     data-toggle="tooltip" title="Email is required"
                                     class="form-control placeholder"/>
                         </div>
@@ -119,70 +120,143 @@
 
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
+                            <input
+                                    type="text" name="sp-org" id="sp-org" placeholder="Type Your Organization..." value="" size="30"
+                                    data-toggle="tooltip" title="Organization is required"
+                                    class="form-control placeholder"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="text" name="sp-city" id="sp-city" placeholder="Type Your City..." value="" size="30"
+                                    data-toggle="tooltip" title="Your city name is required"
+                                    class="form-control placeholder"/>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
                             <textarea
-                                    name="message" id="input-message" placeholder="Type Your Message..." rows="4" cols="50"
-                                    data-toggle="tooltip" title="Message is required"
+                                    name="sp-profile" id="sp-profile" placeholder="Give us your awesome profile..." rows="4" cols="50"
+                                    data-toggle="tooltip" title="Your profile is required"
                                     class="form-control placeholder"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <textarea
+                                    name="sp-talk" id="sp-talk" placeholder="Type Your Talk Description..." rows="4" cols="50"
+                                    data-toggle="tooltip" title="Talk Description is required"
+                                    class="form-control placeholder"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="date" name="sp-arrival" id="sp-arrival" placeholder="Type Your Arrival Date..." value="" size="30"
+                                    data-toggle="tooltip" title="Your arrival date is required"
+                                    class="form-control placeholder"/>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="date" name="sp-city" id="sp-depart" placeholder="Type Your Departure Date..." value="" size="30"
+                                    data-toggle="tooltip" title="Your departure date is required"
+                                    class="form-control placeholder"/>
                         </div>
                     </div>
 
                     <div class="col-sm-12 af-outer af-required text-center">
                         <div class="form-group af-inner">
-                            <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Send message" />
+                            <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Register as Speaker" />
                         </div>
                     </div>
 
                 </form>
 
             </article>
+            <hr>
 
             <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
                 <div class="post-header">
-                    <h2 class="post-title" id="delegate"><a href="blog-single.html">Delegate Registration</a></h2>
+                    <h2 class="post-title" id="delegate"><a href="blog-single.html">Delegate Regsitration</a></h2>
                 </div>
-                <div class="post-media">
-                    <div class="post-type">
-                        <i class="fa fa-video-camera"></i>
+                <form name="delegate-form" method="post" action="#contact" class="delegate-form row" id="deleagate-form">
+
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="text" name="del-name" id="del-name" placeholder="Type Your Name..." value="" size="30"
+                                    data-toggle="tooltip" title="Name is required"
+                                    class="form-control placeholder"/>
+                        </div>
                     </div>
-                    <form name="speaker-form" method="post" action="#contact" class="speaker-form row" id="speaker-form">
 
-                        <div class="col-sm-12 af-outer af-required">
-                            <div class="form-group af-inner">
-                                <input
-                                        type="text" name="name" id="name" placeholder="Type Your Name..." value="" size="30"
-                                        data-toggle="tooltip" title="Name is required"
-                                        class="form-control placeholder"/>
-                            </div>
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="text" name="del-email" id="del-email" placeholder="Type Your Email..." value="" size="30"
+                                    data-toggle="tooltip" title="Email is required"
+                                    class="form-control placeholder"/>
                         </div>
+                    </div>
 
-                        <div class="col-sm-12 af-outer af-required">
-                            <div class="form-group af-inner">
-                                <input
-                                        type="text" name="email" id="email" placeholder="Type Your Email..." value="" size="30"
-                                        data-toggle="tooltip" title="Email is required"
-                                        class="form-control placeholder"/>
-                            </div>
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="text" name="del-org" id="del-org" placeholder="Type Your Organization..." value="" size="30"
+                                    data-toggle="tooltip" title="Organization is required"
+                                    class="form-control placeholder"/>
                         </div>
+                    </div>
 
-                        <div class="col-sm-12 af-outer af-required">
-                            <div class="form-group af-inner">
-                                <textarea
-                                        name="message" id="input-message" placeholder="Type Your Message..." rows="4" cols="50"
-                                        data-toggle="tooltip" title="Message is required"
-                                        class="form-control placeholder"></textarea>
-                            </div>
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="text" name="del-city" id="del-city" placeholder="Type Your City..." value="" size="30"
+                                    data-toggle="tooltip" title="Your city name is required"
+                                    class="form-control placeholder"/>
                         </div>
+                    </div>
 
-                        <div class="col-sm-12 af-outer af-required text-center">
-                            <div class="form-group af-inner">
-                                <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Send message" />
-                            </div>
+
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="date" name="del-arrival" id="del-arrival" placeholder="Type Your Arrival Date..." value="" size="30"
+                                    data-toggle="tooltip" title="Your arrival date is required"
+                                    class="form-control placeholder"/>
                         </div>
+                    </div>
 
-                    </form>
-                </div>
+
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="date" name="del-depart" id="sp-depart" placeholder="Type Your Departure Date..." value="" size="30"
+                                    data-toggle="tooltip" title="Your departure date is required"
+                                    class="form-control placeholder"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 af-outer af-required text-center">
+                        <div class="form-group af-inner">
+                            <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Register as Delegate" />
+                        </div>
+                    </div>
+
+                </form>
 
             </article>
+            <hr>
 
             <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
                 <div class="post-header">
