@@ -96,9 +96,9 @@
 
             <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
                 <div class="post-header">
-                    <h2 class="post-title" id="speaker"><a href="blog-single.html">Speaker Regsitration</a></h2>
+                    <h2 class="post-title" id="speaker"><a href="#"">Speaker Regsitration</a></h2>
                 </div>
-                <form name="speaker-form" method="post" action="#contact" class="speaker-form row" id="speaker-form">
+                <form name="speaker-form" method="post" action="#" class="speaker-form row" id="speaker-form">
 
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
@@ -156,6 +156,7 @@
                     </div>
 
                     <div class="col-sm-12 af-outer af-required">
+                        <h6 class="forms-que"> Arrival Date:</h6>
                         <div class="form-group af-inner">
                             <input
                                     type="date" name="sp-arrival" id="sp-arrival" placeholder="Type Your Arrival Date..." value="" size="30"
@@ -166,6 +167,7 @@
 
 
                     <div class="col-sm-12 af-outer af-required">
+                        <h6 class="forms-que"> Departure Date:</h6>
                         <div class="form-group af-inner">
                             <input
                                     type="date" name="sp-city" id="sp-depart" placeholder="Type Your Departure Date..." value="" size="30"
@@ -189,7 +191,7 @@
                 <div class="post-header">
                     <h2 class="post-title" id="delegate"><a href="blog-single.html">Delegate Regsitration</a></h2>
                 </div>
-                <form name="delegate-form" method="post" action="#contact" class="delegate-form row" id="deleagate-form">
+                <form name="delegate-form" method="post" action="assets/php/delegateRegistration.php" class="delegate-form row" id="deleagate-form" method="post">
 
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
@@ -227,9 +229,10 @@
                         </div>
                     </div>
 
-
                     <div class="col-sm-12 af-outer af-required">
+
                         <div class="form-group af-inner">
+                            <h6 class="forms-que"> Arrival Date:</h6>
                             <input
                                     type="date" name="del-arrival" id="del-arrival" placeholder="Type Your Arrival Date..." value="" size="30"
                                     data-toggle="tooltip" title="Your arrival date is required"
@@ -240,6 +243,7 @@
 
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
+                            <h6 class="forms-que"> Departure Date:</h6>
                             <input
                                     type="date" name="del-depart" id="sp-depart" placeholder="Type Your Departure Date..." value="" size="30"
                                     data-toggle="tooltip" title="Your departure date is required"
