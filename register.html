@@ -98,7 +98,7 @@
                 <div class="post-header">
                     <h2 class="post-title" id="speaker"><a href="#"">Speaker Regsitration</a></h2>
                 </div>
-                <form name="speaker-form" method="post" action="#" class="speaker-form row" id="speaker-form">
+                <form name="speaker-form" method="post" action="assets/php/speakerRegistration.php" class="speaker-form row" id="speaker-form">
 
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
@@ -145,11 +145,19 @@
                                     class="form-control placeholder"></textarea>
                         </div>
                     </div>
+                    <div class="col-sm-12 af-outer af-required">
+                        <div class="form-group af-inner">
+                            <input
+                                    type="text" name="sp-title" id="sp-title" placeholder="Your Talk title..." value="" size="30"
+                                    data-toggle="tooltip" title="Your talk title is required"
+                                    class="form-control placeholder"/>
+                        </div>
+                    </div>
 
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
                             <textarea
-                                    name="sp-talk" id="sp-talk" placeholder="Type Your Talk Description..." rows="4" cols="50"
+                                    name="sp-desc" id="sp-desc" placeholder="Type Your Talk Description..." rows="4" cols="50"
                                     data-toggle="tooltip" title="Talk Description is required"
                                     class="form-control placeholder"></textarea>
                         </div>
@@ -170,7 +178,7 @@
                         <h6 class="forms-que"> Departure Date:</h6>
                         <div class="form-group af-inner">
                             <input
-                                    type="date" name="sp-city" id="sp-depart" placeholder="Type Your Departure Date..." value="" size="30"
+                                    type="date" name="sp-depart" id="sp-depart" placeholder="Type Your Departure Date..." value="" size="30"
                                     data-toggle="tooltip" title="Your departure date is required"
                                     class="form-control placeholder"/>
                         </div>
@@ -191,7 +199,7 @@
                 <div class="post-header">
                     <h2 class="post-title" id="delegate"><a href="blog-single.html">Delegate Regsitration</a></h2>
                 </div>
-                <form name="delegate-form" method="post" action="assets/php/delegateRegistration.php" class="delegate-form row" id="deleagate-form" method="post">
+                <form name="delegate-form" method="post" action="assets/php/delegateRegistration.php" class="delegate-form row" id="deleagate-form">
 
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
