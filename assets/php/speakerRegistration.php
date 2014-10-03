@@ -43,18 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	$myDateTime = new DateTime(Date(''), new DateTimeZone('GMT'));
 	$myDateTime->setTimezone(new DateTimeZone('Asia/Kolkata'));
 	$date=$myDateTime->format('Y-m-d H:i:s');
-	if (empty($_POST['sp-name']))
-	{
-		$nameerror = "Required Field";
-	}
-	else
-	{
-		$name = $_POST['sp-name'];
-		if(!preg_match('/^[a-zA-Z]+[0-9]*[\. ,]*[a-zA-Z0-9]*$/',$name))
-		{
-			$nameerror = "Name must start with a letter and can contain only alphanumerics, spaces, periods and commas";
-		}
-	}
+	$name = $_POST['sp-name'];
 	if (empty($_POST['sp-email']))
 	{
 		$emailerror = "Required Field";
@@ -68,10 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		}
 	}
 	$org = $_POST['sp-org'];
-	if(!preg_match('/$^|^[a-zA-Z]+[0-9]*[\. ,]*[a-zA-Z0-9]*$/',$org))
-	{
-		$orgerror = "Organization name must start with a letter and can contain only alphanumerics, spaces, periods and commas";
-	}
 	$city = $_POST['sp-city'];
 	if(!preg_match('/$^|^[a-zA-Z]+[0-9]*[\. ,]*[a-zA-Z0-9]*$/',$city))
 	{
