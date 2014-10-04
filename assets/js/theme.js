@@ -281,20 +281,6 @@ var theme = function () {
             // Refresh Waypoints on tab click / animation
             $('#tabs-lv1 li a[data-toggle="tab"]').on('shown.bs.tab', function () { $.waypoints('refresh'); });
             $('#tabs-lv2 li a[data-toggle="tab"]').on('shown.bs.tab', function () { $.waypoints('refresh'); });
-        },
-        // Google map
-        initGoogleMap: function() {
-            var map;
-            function initialize() {
-                var mapOptions = {
-                    scrollwheel: false,
-                    zoom: 12,
-                    center: new google.maps.LatLng(9.093692, 76.491590)
-                };
-                map = new google.maps.Map(document.getElementById('map-canvas'),
-                    mapOptions);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
         }
 
     };
