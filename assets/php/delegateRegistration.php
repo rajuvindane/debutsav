@@ -87,12 +87,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if($ret)
 		{
 			$db->close();
-			header('location:return.html');
+			header('location:../../registration_success.html');
 		} else {
-			echo "fail";
+			header('location:../../registration_fail.html');
 		}
 	} else {
-		header('location:../../index.html');
+		header('location:../../registration_fail.html');
 	}
 }
 ?>
