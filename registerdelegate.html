@@ -93,17 +93,16 @@
 
         <!-- Content -->
         <section id="content" class="content col-sm-8 col-md-9">
-
-            <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
+         <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
                 <div class="post-header">
-                    <h2 class="post-title" id="speaker"><a href="#"">Speaker Regsitration</a></h2>
+                    <h2 class="post-title" id="delegate"><a href="blog-single.html">Delegate Regsitration</a></h2>
                 </div>
-                <form name="speaker-form" method="post" action="assets/php/speakerRegistration.php" class="speaker-form row" id="speaker-form">
+                <form name="delegate-form" method="post" action="assets/php/delegateRegistration.php" class="delegate-form row" id="deleagate-form">
 
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
                             <input
-                                    type="text" name="sp-name" id="sp-name" placeholder="Type Your Name..." value="" size="30"
+                                    type="text" name="del-name" id="del-name" placeholder="Type Your Name..." value="" size="30"
                                     data-toggle="tooltip" title="Name is required"
                                     class="form-control placeholder"/>
                         </div>
@@ -112,7 +111,7 @@
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
                             <input
-                                    type="text" name="sp-email" id="sp-email" placeholder="Type Your Email..." value="" size="30"
+                                    type="text" name="del-email" id="del-email" placeholder="Type Your Email..." value="" size="30"
                                     data-toggle="tooltip" title="Email is required"
                                     class="form-control placeholder"/>
                         </div>
@@ -121,7 +120,7 @@
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
                             <input
-                                    type="text" name="sp-org" id="sp-org" placeholder="Type Your Organization..." value="" size="30"
+                                    type="text" name="del-org" id="del-org" placeholder="Type Your Organization..." value="" size="30"
                                     data-toggle="tooltip" title="Organization is required"
                                     class="form-control placeholder"/>
                         </div>
@@ -130,44 +129,18 @@
                     <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
                             <input
-                                    type="text" name="sp-city" id="sp-city" placeholder="Type Your City..." value="" size="30"
+                                    type="text" name="del-city" id="del-city" placeholder="Type Your City..." value="" size="30"
                                     data-toggle="tooltip" title="Your city name is required"
                                     class="form-control placeholder"/>
                         </div>
                     </div>
 
+                    <div class="col-sm-12 af-outer af-required">
 
-                    <div class="col-sm-12 af-outer af-required">
                         <div class="form-group af-inner">
-                            <textarea
-                                    name="sp-profile" id="sp-profile" placeholder="Give us your awesome profile..." rows="4" cols="50"
-                                    data-toggle="tooltip" title="Your profile is required"
-                                    class="form-control placeholder"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 af-outer af-required">
-                        <div class="form-group af-inner">
+                            <h6 class="forms-que"> Arrival Date:</h6>
                             <input
-                                    type="text" name="sp-title" id="sp-title" placeholder="Your Talk title..." value="" size="30"
-                                    data-toggle="tooltip" title="Your talk title is required"
-                                    class="form-control placeholder"/>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 af-outer af-required">
-                        <div class="form-group af-inner">
-                            <textarea
-                                    name="sp-desc" id="sp-desc" placeholder="Type Your Talk Description..." rows="4" cols="50"
-                                    data-toggle="tooltip" title="Talk Description is required"
-                                    class="form-control placeholder"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 af-outer af-required">
-                        <h6 class="forms-que"> Arrival Date:</h6>
-                        <div class="form-group af-inner">
-                            <input
-                                    type="date" name="sp-arrival" id="sp-arrival" placeholder="Type Your Arrival Date..." value="" size="30"
+                                    type="date" name="del-arrival" id="del-arrival" placeholder="Type Your Arrival Date..." value="" size="30"
                                     data-toggle="tooltip" title="Your arrival date is required"
                                     class="form-control placeholder"/>
                         </div>
@@ -175,14 +148,13 @@
 
 
                     <div class="col-sm-12 af-outer af-required">
-                        <h6 class="forms-que"> Departure Date:</h6>
                         <div class="form-group af-inner">
+                            <h6 class="forms-que"> Departure Date:</h6>
                             <input
-                                    type="date" name="sp-depart" id="sp-depart" placeholder="Type Your Departure Date..." value="" size="30"
+                                    type="date" name="del-depart" id="sp-depart" placeholder="Type Your Departure Date..." value="" size="30"
                                     data-toggle="tooltip" title="Your departure date is required"
                                     class="form-control placeholder"/>
                         </div>
-
 
                     <script type="text/javascript"
                             src="http://www.google.com/recaptcha/api/challenge?k=6LfgcfsSAAAAACVDOht-TFFf1bh1h9wZ5PwLoMKD">
@@ -195,12 +167,13 @@
                         <input type="hidden" name="recaptcha_response_field"
                                value="manual_challenge">
                     </noscript>
-                    <br>
                     </div>
+
+                    <br>
 
                     <div class="col-sm-12 af-outer af-required text-center">
                         <div class="form-group af-inner">
-                            <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Register as Speaker" />
+                            <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Register as Delegate" />
                         </div>
                     </div>
 
@@ -208,6 +181,19 @@
 
             </article>
             <hr>
+
+            <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
+                <div class="post-header">
+                    <h2 class="post-title" id="webmaker"><a href="blog-single.html">Mozilla Webmaker Party Registration</a></h2>
+                </div>
+                <div class="post-media">
+                    <div class="post-type">
+                        <i class="fa fa-video-camera"></i>
+                    </div>
+                    <iframe src="https://docs.google.com/forms/d/1HnedokpG7jQ4jBSsaYwln_TAgMSQiloLTHHIheh0AzY/viewform?embedded=true" width="800" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                </div>
+
+            </article>
 
         </section>
         <!-- Content -->
@@ -220,9 +206,9 @@
             <div class="widget categories">
                 <h4 class="widget-title">Register as</h4>
                 <ul>
-                    <li class="active"><a href="#speaker" class="scroll-to" >Speaker</a></li>
-                    <li><a href="registerdelegate.html#delegate" class="scroll-to">Delegate </a></li>
-                    <li><a href="registerdelegate.html#webmaker" class="scroll-to">Mozilla Webmaker Party</a></li>
+                    <li ><a href="register.html#speaker" class="scroll-to" >Speaker</a></li>
+                    <li class="active"><a href="#delegate" class="scroll-to">Delegate </a></li>
+                    <li><a href="#webmaker" class="scroll-to">Mozilla Webmaker Party</a></li>
                 </ul>
             </div>
 
