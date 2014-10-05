@@ -58,21 +58,21 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 		$myDateTime = new DateTime( Date( '' ), new DateTimeZone( 'GMT' ) );
 		$myDateTime->setTimezone( new DateTimeZone( 'Asia/Kolkata' ) );
 		$date = $myDateTime->format( 'Y-m-d H:i:s' );
-		$name = $_POST['del-name'];
+		$name = mysql_real_escape_string($_POST['del-name']);
 		if ( empty( $_POST['del-email'] ) )
 		{
 			$emailerror = "Required Field";
 		}
 		else
 		{
-			$email = $_POST['del-email'];
+			$email = mysql_real_escape_string($_POST['del-email']);
 			if ( !preg_match( "/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email ) )
 			{
 				$emailerror = "Invalid Format";
 			}
 		}
-		$org = $_POST['del-org'];
-		$city = $_POST['del-city'];
+		$org = mysql_real_escape_string($_POST['del-org']);
+		$city = mysql_real_escape_string($_POST['del-city']);
 		if ( !preg_match( '/$^|^[a-zA-Z]+[0-9]*[\. ,]*[a-zA-Z0-9]*$/', $city ) )
 		{
 			$cityerror = "City name must start with a letter and can contain only alphanumerics, spaces, periods and commas";
@@ -83,23 +83,23 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 			$arrivalerror = "No arriving date given";
 		} else {
 
-			$arrival = $_POST['del-arrival'];
+			$arrival = mysql_real_escape_string($_POST['del-arrival']);
 		}
 		if ( empty( $_POST['del-depart'] ) ) {
 			$departureerror = "No departure date given";
 		} else {
-			$departure = $_POST['del-depart'];
+			$departure = mysql_real_escape_string($_POST['del-depart']);
 		}
 		$lap = 1;
 		if ( empty( $_POST['del-accom'] ) ) {
 			$accom = "0";
 		} else {
-			$accom = $_POST['del-accom'];
+			$accom = mysql_real_escape_string($_POST['del-accom']);
 		}
 		if ( empty( $_POST['del-tshirt'] ) ) {
 			$tshirt = "0";
 		} else {
-			$tshirt = $_POST['del-tshirt'];
+			$tshirt = mysql_real_escape_string($_POST['del-tshirt']);
 		}
 
 		if ( $nameerror == "" && $emailerror == "" && $arrivalerror == "" && $departureerror == "" && $orgerror == "" && $cityerror == "" )

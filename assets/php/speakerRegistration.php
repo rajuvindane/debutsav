@@ -54,21 +54,21 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 		$myDateTime = new DateTime( Date( '' ), new DateTimeZone( 'GMT' ) );
 		$myDateTime->setTimezone( new DateTimeZone( 'Asia/Kolkata' ) );
 		$date = $myDateTime->format( 'Y-m-d H:i:s' );
-		$name = $_POST['sp-name'];
+		$name = mysql_real_escape_string($_POST['sp-name']);
 		if ( empty( $_POST['sp-email'] ) )
 		{
 			$emailerror = "Required Field";
 		}
 		else
 		{
-			$email = $_POST['sp-email'];
+			$email = mysql_real_escape_string($_POST['sp-email']);
 			if ( !preg_match( "/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email ) )
 			{
 				$emailerror = "Invalid Format";
 			}
 		}
-		$org = $_POST['sp-org'];
-		$city = $_POST['sp-city'];
+		$org = mysql_real_escape_string($_POST['sp-org']);
+		$city = mysql_real_escape_string($_POST['sp-city']);
 		if ( !preg_match( '/$^|^[a-zA-Z]+[0-9]*[\. ,]*[a-zA-Z0-9]*$/', $city ) )
 		{
 			$cityerror = "City name must start with a letter and can contain only alphanumerics, spaces, periods and commas";
@@ -76,40 +76,40 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 		if ( empty( $_POST['sp-profile'] ) ) {
 			$profilerror = "No profile";
 		} else {
-			$profile = $_POST['sp-profile'];
+			$profile = mysql_real_escape_string($_POST['sp-profile']);
 		}
 
 		if ( empty( $_POST['sp-tshirt'] ) ) {
 			$tshirt = "0";
 		} else {
-			$tshirt = $_POST['sp-tshirt'];
+			$tshirt = mysql_real_escape_string($_POST['sp-tshirt']);
 		}
 
 		if ( empty( $_POST['sp-arrival'] ) ) {
 			$arrivalerror = "No arriving date given";
 		} else {
-			$arrival = $_POST['sp-arrival'];
+			$arrival = mysql_real_escape_string($_POST['sp-arrival']);
 		}
 		if ( empty( $_POST['sp-depart'] ) ) {
 			$departureerror = "No departure date given";
 		} else {
-			$departure = $_POST['sp-depart'];
+			$departure = mysql_real_escape_string($_POST['sp-depart']);
 		}
 		$lap = 1;
 		if ( empty( $_POST['sp-accom'] ) ) {
 			$accom = "0";
 		} else {
-			$accom = $_POST['sp-accom'];
+			$accom = mysql_real_escape_string($_POST['sp-accom']);
 		}
-		$pretitle = $_POST['sp-title'];
+		$pretitle = mysql_real_escape_string($_POST['sp-title']);
 		if ( empty( $pretitle ) )
 		{
 			$titleerror = "Required Field";
 		}
 		else
 		{
-			$title = $_POST['sp-title'];
-			$desc = $_POST['sp-desc'];
+			$title = mysql_real_escape_string($_POST['sp-title']);
+			$desc = mysql_real_escape_string($_POST['sp-desc']);
 
 		}
 		if ( $nameerror == "" && $emailerror == "" && $arrivalerror == "" && $departureerror == "" && $orgerror == "" && $cityerror == "" && $titleerror == "" && $profilerror == "" )
