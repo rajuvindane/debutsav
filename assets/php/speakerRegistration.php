@@ -1,6 +1,5 @@
 <?php
-error_reporting( E_ALL );
-ini_set( 'display_errors', '1' );
+error_reporting(0);
 # Database Connection
 class database extends SQLite3
 {
@@ -54,21 +53,21 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 		$myDateTime = new DateTime( Date( '' ), new DateTimeZone( 'GMT' ) );
 		$myDateTime->setTimezone( new DateTimeZone( 'Asia/Kolkata' ) );
 		$date = $myDateTime->format( 'Y-m-d H:i:s' );
-		$name = $_POST['sp-name'];
+		$name = SQLite3::escapeString( $_POST['sp-name'] );
 		if ( empty( $_POST['sp-email'] ) )
 		{
 			$emailerror = "Required Field";
 		}
 		else
 		{
-			$email = $_POST['sp-email'];
+			$email = SQLite3::escapeString( $_POST['sp-email'] );
 			if ( !preg_match( "/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email ) )
 			{
 				$emailerror = "Invalid Format";
 			}
 		}
-		$org = $_POST['sp-org'];
-		$city = $_POST['sp-city'];
+		$org = SQLite3::escapeString( $_POST['sp-org'] );
+		$city = SQLite3::escapeString( $_POST['sp-city'] );
 		if ( !preg_match( '/$^|^[a-zA-Z]+[0-9]*[\. ,]*[a-zA-Z0-9]*$/', $city ) )
 		{
 			$cityerror = "City name must start with a letter and can contain only alphanumerics, spaces, periods and commas";
@@ -76,40 +75,40 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 		if ( empty( $_POST['sp-profile'] ) ) {
 			$profilerror = "No profile";
 		} else {
-			$profile = $_POST['sp-profile'];
+			$profile = SQLite3::escapeString( $_POST['sp-profile'] );
 		}
 
 		if ( empty( $_POST['sp-tshirt'] ) ) {
 			$tshirt = "0";
 		} else {
-			$tshirt = $_POST['sp-tshirt'];
+			$tshirt = SQLite3::escapeString( $_POST['sp-tshirt'] );
 		}
 
 		if ( empty( $_POST['sp-arrival'] ) ) {
 			$arrivalerror = "No arriving date given";
 		} else {
-			$arrival = $_POST['sp-arrival'];
+			$arrival = SQLite3::escapeString( $_POST['sp-arrival'] );
 		}
 		if ( empty( $_POST['sp-depart'] ) ) {
 			$departureerror = "No departure date given";
 		} else {
-			$departure = $_POST['sp-depart'];
+			$departure = SQLite3::escapeString( $_POST['sp-depart'] );
 		}
 		$lap = 1;
 		if ( empty( $_POST['sp-accom'] ) ) {
 			$accom = "0";
 		} else {
-			$accom = $_POST['sp-accom'];
+			$accom = SQLite3::escapeString( $_POST['sp-accom'] );
 		}
-		$pretitle = $_POST['sp-title'];
+		$pretitle = SQLite3::escapeString( $_POST['sp-title'] );
 		if ( empty( $pretitle ) )
 		{
 			$titleerror = "Required Field";
 		}
 		else
 		{
-			$title = $_POST['sp-title'];
-			$desc = $_POST['sp-desc'];
+			$title = SQLite3::escapeString( $_POST['sp-title'] );
+			$desc = SQLite3::escapeString( $_POST['sp-desc'] );
 
 		}
 		if ( $nameerror == "" && $emailerror == "" && $arrivalerror == "" && $departureerror == "" && $orgerror == "" && $cityerror == "" && $titleerror == "" && $profilerror == "" )
@@ -123,11 +122,11 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 				header( 'location:../../registration_success.html' );
 			} else {
 				echo "fail";
-//				header( 'location:../../registration_fail.html' );
+				header( 'location:../../registration_fail.html' );
 			}
 		} else {
 			echo "fail";
-//			header( 'location:../../registration_fail.html' );
+			header( 'location:../../registration_fail.html' );
 		}
 	}
 }
