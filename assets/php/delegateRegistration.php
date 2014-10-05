@@ -43,7 +43,7 @@ $lap = $accom = 0;
 $nameerror = $emailerror = $arrivalerror = $departureerror = $orgerror = $cityerror = "";
 if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 	require_once( 'recaptchalib.php' );
-	$privatekey = "key_replaced_in_server";
+	$privatekey = "6LfgcfsSAAAAAAzCIC7awzgPpYm1Q2riXKRPvnlo";
 	$resp = recaptcha_check_answer ( $privatekey,
 	$_SERVER["REMOTE_ADDR"],
 	$_POST["recaptcha_challenge_field"],
