@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: router
- * Date: 10/3/14
- * Time: 1:20 PM
- */
+error_reporting(0);
 # Database Connection
 class database extends SQLite3
 {
